@@ -37,9 +37,12 @@ body {
   
   .input-group {
     margin-bottom: 20px;
+    padding: 10px;
+    border: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
   }
   
   .input {
