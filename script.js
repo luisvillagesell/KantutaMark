@@ -61,20 +61,3 @@ function actualizarTotal() {
     document.querySelector('.total').innerText = `Total: $${total}`;
 }
 
-// Validación de formulario (simulado)
-const formulario = document.querySelector('form');
-
-formulario.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nombre = formulario.querySelector('#nombre').value.trim();
-    const email = formulario.querySelector('#email').value.trim();
-
-    if (nombre === '' || email === '') {
-        alert('Por favor, completa todos los campos.');
-        return;
-    }
-
-    // Envío del formulario (simulado)
-    alert('¡Formulario enviado correctamente!');
-    formulario.reset();
-});

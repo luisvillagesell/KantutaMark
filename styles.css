@@ -2,7 +2,7 @@
 
 /* Estilos para el header */
 header {
-    background-color: #222;
+    background:  linear-gradient(to bottom right, #420d0d, #1a1a1a);
     color: #fff;
     padding: 20px;
     display: flex;
@@ -40,27 +40,119 @@ nav ul li a:hover {
     color: #66ccff;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media only screen and (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    nav {
-        margin-left: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Ajustes para pantallas muy pequeñas */
-@media only screen and (max-width: 480px) {
-    header h1 {
-        font-size: 20px;
-    }
+.contenedor-categorias {
+    float: left;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1% 1% 1%;
+    padding: 15px;
+    background: linear-gradient(to bottom right, #420d0d, #1a1a1a);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.categoria img {
+    width: 25%;
+    padding: 1em;
+    height: auto;
+    border-radius: 10px;
+    filter: brightness(90%) saturate(110%);
+    transition: transform 0.5s ease;
+}
+
+.categoria:hover img {
+    transform: scale(1.05);
+}
+
+.categoria h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.producto {
+    float: left;
+    width: 20%;
+    margin: 0 5px 20px;
+    padding: 25px;
+    background: linear-gradient(to bottom right, #420d0d, #1a1a1a);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    color: #fff;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    filter: brightness(90%) saturate(110%);
+    transition: transform 0.5s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.05);
+}
+
+.producto h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.producto p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.producto a {
+    display: block;
+    color: #66ccff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.producto a:hover {
+    color: #ffcc00;
+}
+
+.producto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    z-index: -1;
+    pointer-events: none;
+    animation: pulse 2s infinite alternate;
 }
 
 /* Efectos y animaciones */
@@ -78,4 +170,48 @@ button {
 button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.02);
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media only screen and (max-width: 1024px) {
+    .producto {
+        float: left;
+        width: 25%;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+header h1 {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 450px) {
+    .producto {
+        float: none;
+        width: 100%;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
