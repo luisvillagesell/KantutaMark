@@ -1,6 +1,3 @@
-/* Estilos generales */
-
-/* Estilos para el header */
 header {
     background:  linear-gradient(to bottom right, #420d0d, #1a1a1a);
     color: #fff;
@@ -12,7 +9,11 @@ header {
 }
 
 header h1 {
-    font-size: 24px;
+    justify-content: center;
+}
+
+header h2 {
+    font-weight: 25%;
 }
 
 /* Estilos para el menú de navegación */
@@ -50,10 +51,10 @@ body {
 
 .contenedor-categorias {
     float: left;
-    width: 15%;
+    width: 20%;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin: 10px;
 }
 
 .categoria {
@@ -71,9 +72,7 @@ body {
 
 .categoria img {
     width: 25%;
-    padding: 1em;
-    height: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     filter: brightness(90%) saturate(110%);
     transition: transform 0.5s ease;
 }
@@ -83,8 +82,9 @@ body {
 }
 
 .categoria h2 {
+    width: 50%;
     font-size: 1.5em;
-    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .contenedor-productos {
@@ -98,8 +98,8 @@ body {
 .producto {
     float: left;
     width: 20%;
-    margin: 0 5px 20px;
-    padding: 25px;
+    margin: 1%;
+    padding: 10px;
     background: linear-gradient(to bottom right, #420d0d, #1a1a1a);
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -189,11 +189,6 @@ button:hover {
         float: left;
         width: 25%;
     }
-}
-
-/* Ajustes para pantallas muy pequeñas */
-header h1 {
-    font-size: 20px;
 }
 
 @media only screen and (max-width: 450px) {
