@@ -155,6 +155,74 @@ body {
     animation: pulse 2s infinite alternate;
 }
 
+/* Estilos para el footer */
+.footer {
+    background: linear-gradient(to bottom right, #420d0d, #1a1a1a);
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+  }
+
+/* Estilos para el contenedor de íconos */
+.container-iconos {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-iconos figure {
+    margin: 0 10px;
+  }
+  
+  
+  /* Estilos para el texto en el footer */
+  .footer p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el enlace en el footer */
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ff00ff; /* Color neon */
+  }
+  
+  /* Estilos para el efecto de sombra */
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .footer:hover::before {
+    top: 5px;
+    bottom: 5px;
+  }
+  
+  /* Estilos para los elementos del footer con movimiento */
+  .footer p,
+  .footer a {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer p:hover,
+  .footer a:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba */
+  }
+  
+
 /* Efectos y animaciones */
 button {
     background-color: #007bff;

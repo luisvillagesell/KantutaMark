@@ -1,4 +1,4 @@
-// script.js
+import "/sass/style.scss";
 
 // Carga de productos (simulado)
 document.addEventListener('DOMContentLoaded', function() {
