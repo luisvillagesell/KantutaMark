@@ -1,13 +1,10 @@
-import "/sass/style.scss";
 
 // Carga de productos (simulado)
 document.addEventListener('DOMContentLoaded', function() {
     cargarProductos();
 });
 
-function cargarProductos() {
-    // Aquí se simularía la carga de productos desde una base de datos o una API
-    // Por ahora, utilizaremos un array de productos de ejemplo
+function cargarProductos() {   
     const productos = [
         { id: 1, nombre: 'Producto 1', precio: 10 },
         { id: 2, nombre: 'Producto 2', precio: 20 },
